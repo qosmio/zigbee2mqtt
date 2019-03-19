@@ -1,3 +1,7 @@
+# Copy this sample file to 'configuration.yaml'
+# See 'https://www.zigbee2mqtt.io/configuration/configuration.html'
+# for more configuration options.
+
 # Home Assistant integration (MQTT discovery)
 homeassistant: false
 
