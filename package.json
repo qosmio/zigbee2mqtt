@@ -32,6 +32,7 @@
   },
   "homepage": "https://koenkk.github.io/zigbee2mqtt",
   "dependencies": {
+    "debounce": "*",
     "git-last-commit": "*",
     "js-yaml": "*",
     "mkdir-recursive": "*",
@@ -42,10 +43,10 @@
     "rimraf": "*",
     "semver": "*",
     "winston": "2.4.2",
-    "zcl-id": "git+https://github.com/Koenkk/zcl-id.git#77ba3058c6c4b09a9958761ae5e3046765c12872",
+    "zcl-id": "git+https://github.com/Koenkk/zcl-id.git#4fa75c92424cd070a3bf6e1f4640b1e3ad8f802d",
     "ziee": "*",
-    "zigbee-shepherd": "git+https://github.com/Koenkk/zigbee-shepherd.git#4618b861d195de48666f801d9e531dc3a22bc2a4",
-    "zigbee-shepherd-converters": "8.0.2",
+    "zigbee-shepherd": "git+https://github.com/Koenkk/zigbee-shepherd.git#2e9045d873e38ff35069c92d926f003f04571387",
+    "zigbee-shepherd-converters": "8.0.6",
     "zive": "*"
   },
   "devDependencies": {
