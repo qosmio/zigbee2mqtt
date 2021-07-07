@@ -1,6 +1,13 @@
 #!/bin/bash -e
 
-echo "Stopping zigbee2mqtt..."
+if [ -d data-backup ]; then
+   echo "ERROR: Backup directory exists. May be previous restoring was failed?"
+   echo "1. Save 'data-backup' and 'data' dirs to safe location to make possibility to restore config later."
+   echo "2. Manually delete 'data-backup' dir and try again."
+   exit 1
+fi
+
+echo "Stopping Zigbee2MQTT..."
 sudo systemctl stop zigbee2mqtt
 
 echo "Creating backup of configuration..."
@@ -11,14 +18,13 @@ git checkout HEAD -- npm-shrinkwrap.json
 git pull
 
 echo "Installing dependencies..."
-rm -rf node_modules
-npm install
+npm ci
 
 echo "Restore configuration..."
 cp -R data-backup/* data
 rm -rf data-backup
 
-echo "Starting zigbee2mqtt..."
+echo "Starting Zigbee2MQTT..."
 sudo systemctl start zigbee2mqtt
 
 echo "Done!"
